@@ -12,11 +12,13 @@
   font-weight: 500;
 }
 
-body {
+* {
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0 60px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
   background-color: black;
-  font-family: "Netflix Sans";
-  font-weight: 500;
 }
