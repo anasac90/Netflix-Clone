@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../assets/greatstack/logo.png";
 import { signin, signup, logout } from "../../firebase";
 import netflixSpinner from "../../assets/greatstack/netflix_spinner.gif";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [signState, setSignState] = useState("Sign In");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,6 +26,7 @@ function Login() {
     }
 
     setLoading(false);
+    navigate("/");
   };
 
   return loading ? (
